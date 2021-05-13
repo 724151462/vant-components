@@ -28,24 +28,31 @@ export default {
     ItemFactory
   },
   props: {
-    formType: {
-      type: String,
-      require: true
-    },
-    inputOption: {
-      type: Object
+    formItem: {
+      type: Object,
+      require: true,
+      default: () => {
+        return {
+          inputList: [
+            {
+              component: 'UtilInput',
+              key: 'name'
+            }
+          ],
+          inputOption: {
+            name: {
+              label: '姓名',
+              value: '',
+              placeholder: '请输入人姓名',
+              rules: [{ required: true, message: '请输入人姓名' }]
+            }
+          }
+        }
+      }
     }
   },
   data() {
-    return {
-      formItem:
-        // 根据type加载对应表单，得到inputList（组件及key）和inputOption（字段配置）
-        formTypes(this.formType, '')
-    }
-  },
-  mounted() {
-    this.formItem.inputOption = this.inputOption
-    console.log(this.formItem.inputOption)
+    return {}
   },
   methods: {
     onSubmit(val) {

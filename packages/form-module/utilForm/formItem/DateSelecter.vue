@@ -3,7 +3,7 @@
     <van-field
       readonly
       clickable
-      name="datetimePicker"
+      :name="formKey"
       :label="inputOption[formKey].label"
       :value="inputOption[formKey].value"
       :placeholder="inputOption[formKey].placeholder"
@@ -15,8 +15,8 @@
       position="bottom"
     >
       <van-datetime-picker
-        type="datetime"
-        title="选择月日"
+        :type="inputOption[formKey].timeType"
+        title="选择时间"
         @confirm="onConfirm"
       />
     </van-popup>
@@ -38,7 +38,10 @@ export default {
   },
   methods: {
     onConfirm(val) {
-      this.inputOption[this.formKey].value = timeFormat(val)
+      this.inputOption[this.formKey].value = timeFormat(
+        val,
+        this.inputOption[this.formKey].timeType
+      )
       this.showPicker = false
     },
     formatter(type, val) {
