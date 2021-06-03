@@ -25,7 +25,7 @@
 // import 'element-ui/lib/theme-chalk/button.css'
 import UtilForm from '../../../packages/form-module/index'
 export default {
-  name: 'HelloWorld',
+  name: 'Form',
   components: { UtilForm },
   props: {
     message: {

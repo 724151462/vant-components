@@ -10,5 +10,9 @@ module.exports = {
   'test-module': {
     input: 'packages/test-module/index.js',
     output: 'test-module'
+  },
+  'list-module': {
+    input: 'packages/list-module/index.js',
+    output: 'list-module'
   }
 }

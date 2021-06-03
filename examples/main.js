@@ -11,7 +11,10 @@ import {
   Popup,
   DatetimePicker,
   Radio,
-  RadioGroup
+  RadioGroup,
+  Empty,
+  List,
+  Skeleton
 } from 'vant'
 import 'vant/lib/index.less'
 
@@ -28,6 +31,9 @@ Vue.use(Popup)
 Vue.use(DatetimePicker)
 Vue.use(Radio)
 Vue.use(RadioGroup)
+Vue.use(Empty)
+Vue.use(List)
+Vue.use(Skeleton)
 
 new Vue({
   router,

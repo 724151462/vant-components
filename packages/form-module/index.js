@@ -1,7 +1,7 @@
 import utilForm from './utilForm/index.vue'
 
 utilForm.install = (vue) => {
-  vue.component(name, utilForm)
+  vue.component(utilForm.name, utilForm)
 }
 
 export default utilForm

@@ -14,6 +14,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '/list/index',
+      name: 'list',
+      component: () => import(/* webpackChunkName: "about" */ './views/list/index.vue')
+    },
+    {
       path: '/form/index',
       name: 'formIndex',
       // route level code-splitting

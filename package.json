@@ -1,6 +1,6 @@
 {
   "name": "linewell-lib-starter",
-  "version": "0.0.9",
+  "version": "0.0.12",
   "description": "A library packaging tool based on rollup and vue-cli3",
   "private": false,
   "author": "wenbin.chen <anncwb@126.com>",

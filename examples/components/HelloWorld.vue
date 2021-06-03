@@ -5,6 +5,11 @@
       is-link
       to="/form/index"
     />
+    <van-cell
+      title="列表"
+      is-link
+      to="/list/index"
+    />
   </div>
 </template>
 
